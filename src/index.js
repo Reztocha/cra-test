@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// Add this in node_modules/react-dom/index.js
+window.React1 = require('react');
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App title="The GitHub Cards App"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
