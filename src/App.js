@@ -5,7 +5,7 @@ import './App.css';
 function Todo({ todo, index, completeTodo, deleteTodo }) {
 	return <div style={{textDecoration: todo.isCompleted ? 'line-through' : ''}} className='todo'>
 		{todo.text}
-		<div>
+		<div style={{display: 'inline', padding: '0px 0px 0px 10px'}}>
 			<button onClick={() => completeTodo(index)}>Complete</button>
 			<button onClick={() => deleteTodo(index)}>x</button>
 		</div>
@@ -24,7 +24,7 @@ function TodoForm({addTodo}) {
 	
 	return(
 		<form onSubmit={handleSubmit}>
-			<input type='text' className='input' value={value} onChange={e => setValue(e.target.value)}/>
+			<input type='text' className='input' placeholder='Type and Press Enter' value={value} onChange={e => setValue(e.target.value)}/>
 		</form>
 	)
 }
